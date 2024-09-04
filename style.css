@@ -1,0 +1,139 @@
+/* Set default styles */
+:root {
+    line-height: 1.5;
+  }
+  
+  h1, h2, h3, h4, h5, figure, p, ol, ul {
+    margin: 0;
+  }
+  
+  ol[role="list"], ul[role="list"] {
+    list-style: none;
+    padding-inline: 0;
+  }
+  
+  h1, h2, h3, h4, h5 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  
+  img {
+    display: block;
+    max-inline-size: 100%;
+  }
+
+  /* Set up fonts */
+  
+  /* Set up varibles here */
+:root {
+    --color: rgb(167, 217, 168);
+}
+
+* {
+    border: 1px solid var(--color);
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(5, 1fr);
+
+}
+
+.sidebar {
+    background-color: var(--color);
+    font-weight: 500;
+    grid-row: 1 / 6;
+    display:  grid;
+    grid-template-rows: 1fr 4fr 5fr;
+    .logo {
+        font-size: 2rem;
+    }
+    li {
+        font-size: 1.5rem;
+        list-style-type: none;
+        padding: 2% 10%;
+    }
+    img {
+        display: inline-block;
+    }
+}
+
+
+.header {
+    background-color: var(--color);
+    grid-column: 2 / 6;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;
+    .search-bar {
+        display: flex;
+        align-items: center;
+    }
+    #search-box {
+        flex:auto;
+        height: 3rem;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-content: center;
+    }
+    .user-info {
+        display: grid;
+        grid-template-columns: 2fr 8fr;
+    }
+    img.profile-icon {
+        grid-row: span 2;
+    }
+    .tags {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+body>.container {
+    grid-row: 2 / 6;
+    display: inherit;
+    grid-template-columns: 8fr 3fr;
+    grid-template-rows: 1fr 5fr 5fr;
+}
+
+.project-list {
+    grid-row: 2 / 4;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+}
+
+.project-list .card {
+    background-color: var(--color);
+    border: 1px solid white;
+    height:280px;
+}
+
+.announcements {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr ;
+}
+
+.trending {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    .item {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    }
+
+}
+
+
+.title {
+    font-size: 1.5rem;
+}
